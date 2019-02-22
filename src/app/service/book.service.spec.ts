@@ -12,6 +12,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { Book } from '../model/book';
 import { BookListComponent } from '../book-list/book-list.component';
 import { NewBookComponent } from '../new-book/new-book.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 describe('BookService', () => {
   beforeEach(() => TestBed.configureTestingModule({
@@ -27,6 +28,7 @@ describe('BookService', () => {
       MyOwnCustomMaterialModule,
       FlexLayoutModule
   ],
+    providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]}));
 
   it('should be created', () => {
