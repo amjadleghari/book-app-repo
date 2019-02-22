@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../model/book';
-import { BookService } from '../book.service';
+import { BookService } from '../service/book.service';
+import { QueryOptions } from '../interface/query-builder';
 
 
 @Component({
@@ -18,14 +19,14 @@ title: string;
   }
 
   getBooks(): void {
-    this.bookService.getBooks()
+    this.bookService.list(new QueryOptions)
       .subscribe(books => {
         this.books = books;
       });
   }
 
   deleteBook(Id: number): void {
-    this.bookService.deleteBook(Id)
+    this.bookService.delete(Id)
     .subscribe(val => {
       this.books = this.books.filter(b => b.id !== Id);
     });

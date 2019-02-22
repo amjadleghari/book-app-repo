@@ -4,7 +4,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { BookService } from '../book.service';
+import { BookService } from '../service/book.service';
 
 
 @Component({
@@ -34,7 +34,7 @@ export class NewBookComponent implements OnInit {
 
   onSubmit() {
     if (this.newBookForm.valid) {
-      this.bookService.addBook(this.newBookForm.value)
+      this.bookService.create(this.newBookForm.value)
         .subscribe(() => this.goBack());
     }
   }

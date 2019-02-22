@@ -5,13 +5,13 @@ import { BookService } from './book.service';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from '../app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MyOwnCustomMaterialModule } from './my-own-custom-material-module/my-own-custom-material-module.module';
+import { MyOwnCustomMaterialModule } from '../my-own-custom-material-module/my-own-custom-material-module.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { Book } from './model/book';
-import { BookListComponent } from './book-list/book-list.component';
-import { NewBookComponent } from './new-book/new-book.component';
+import { Book } from '../model/book';
+import { BookListComponent } from '../book-list/book-list.component';
+import { NewBookComponent } from '../new-book/new-book.component';
 
 describe('BookService', () => {
   beforeEach(() => TestBed.configureTestingModule({

@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NewBookComponent } from './new-book.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../app-routing.module';
-import { BookService } from '../book.service';
+import { BookService } from '../service/book.service';
 import { BookListComponent } from '../book-list/book-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyOwnCustomMaterialModule } from '../my-own-custom-material-module/my-own-custom-material-module.module';

@@ -1,6 +1,8 @@
-export class Book {
-    constructor(private _id?: number, private _title?: string, private _category?: string, private _description?: string) {
+import { Resource } from './resource';
 
+export class Book extends Resource {
+    constructor(_id?: number, private _title?: string, private _category?: string, private _description?: string) {
+        super(_id);
     }
 
     get id() {

@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyOwnCustomMaterialModule } from './my-own-custom-material-module/my-own-custom-material-module.module';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+import { InMemoryDataService } from './service/in-memory-data.service';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
