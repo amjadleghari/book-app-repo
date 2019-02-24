@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Resource } from '../model/resource';
 import { QueryOptions } from '../interface/query-builder';
-import { Serializer } from '../interface/serializer';
+import { Serializer } from '../model/serializer';
 
 
 @Injectable({

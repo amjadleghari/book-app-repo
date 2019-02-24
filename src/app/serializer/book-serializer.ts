@@ -1,4 +1,4 @@
-import { Serializer } from '../interface/serializer';
+import { Serializer } from '../model/serializer';
 import { Book } from '../model/book';
 
 export class BookSerializer implements Serializer {

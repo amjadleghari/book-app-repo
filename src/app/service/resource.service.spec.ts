@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { MyOwnCustomMaterialModule } from '../my-own-custom-material-module/my-own-custom-material-module.module';
@@ -16,6 +16,8 @@ import { Book } from '../model/book';
 import { NewBookComponent } from '../new-book/new-book.component';
 import { BookListComponent } from '../book-list/book-list.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { BookSerializer } from '../serializer/book-serializer';
+import { Serializer } from '../model/serializer';
 
 
 
@@ -34,7 +36,12 @@ describe('ResourceService', () => {
       MyOwnCustomMaterialModule,
       FlexLayoutModule
     ],
-    providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    providers: [
+        { provide: String, useValue: '/' },
+        { provide: String, useValue: '' },
+        { provide: Serializer, useClass: Serializer},
+        ResourceService,
+      ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
   }));
 

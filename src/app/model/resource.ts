@@ -1,5 +1,5 @@
 export class Resource {
-    constructor(protected _id: number) { }
+    constructor(protected _id?: number) { }
 
     public get id() {
         return this._id;

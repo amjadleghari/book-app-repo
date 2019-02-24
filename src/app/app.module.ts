@@ -16,6 +16,7 @@ import { InMemoryDataService } from './service/in-memory-data.service';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { APP_BASE_HREF } from '@angular/common';
+import { ResourceService } from './service/resource.service';
 
 @NgModule({
   declarations: [
@@ -39,8 +40,8 @@ import { APP_BASE_HREF } from '@angular/common';
       InMemoryDataService, { dataEncapsulation: false }
     ),
   ],
+  providers: [ResourceService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
