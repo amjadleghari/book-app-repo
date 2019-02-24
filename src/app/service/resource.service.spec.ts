@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { Injectable } from '@angular/core';
 
-import { ResourceService } from './resource.service';
+import { ResourceService, _url, _endpoint } from './resource.service';
 import { Book } from '../model/book';
 import { NewBookComponent } from '../new-book/new-book.component';
 import { BookListComponent } from '../book-list/book-list.component';
@@ -37,8 +37,8 @@ describe('ResourceService', () => {
       FlexLayoutModule
     ],
     providers: [
-      { provide: APP_BASE_HREF, useValue: '/' },
-      { provide: String, useValue: '' },
+      { provide: _url, useValue: '/' },
+      { provide: _endpoint, useValue: '' },
       { provide: Serializer, useClass: Serializer},
       ResourceService,
       ],
