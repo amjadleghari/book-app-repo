@@ -37,10 +37,10 @@ describe('ResourceService', () => {
       FlexLayoutModule
     ],
     providers: [
-        { provide: String, useValue: '/' },
-        { provide: String, useValue: '' },
-        { provide: Serializer, useClass: Serializer},
-        ResourceService,
+      { provide: APP_BASE_HREF, useValue: '/' },
+      { provide: String, useValue: '' },
+      { provide: Serializer, useClass: Serializer},
+      ResourceService,
       ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
   }));
